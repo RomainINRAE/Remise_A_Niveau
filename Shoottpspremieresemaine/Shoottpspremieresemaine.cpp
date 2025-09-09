@@ -2,8 +2,10 @@
 //
 
 #include "framework.h"
-#include "Shoottpspremieresemaine.h"
 #include <SFML/Graphics.hpp>
+#include "Manager.h"
+#include "Shoottpspremieresemaine.h"
+
 
 #define MAX_LOADSTRING 100
 
@@ -24,9 +26,13 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ int       nCmdShow)
 {
 
+
+    Manager manager(hInstance, nCmdShow);
+    return manager.Run();
+
     //Création de la page avec les éléments
 
-    sf::RenderWindow window(sf::VideoMode({ 500, 500 }), "SFML works!");
+   /* sf::RenderWindow window(sf::VideoMode({500, 500}), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
@@ -66,7 +72,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         //window.draw(text);
 
         window.display();
-    }
+    }*/
 }
 
 
